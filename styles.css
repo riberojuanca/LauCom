@@ -1,0 +1,75 @@
+:root {
+  --font-sarabun: 'Sarabun', sans-serif;
+  --bg-dark-body: #04030f;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--font-sarabun);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+
+body {
+  margin: auto;
+  overflow-x: hidden;
+  min-width: 400px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2rem;
+  color: red;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+
+
+
+/*Mobile version*/
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 0 1rem;
+  height: 60px;
+  background-color: rgb(56, 117, 64);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  /* display: none; */
+  gap: 1rem;
+}
+
+section {
+  height: 100vh;
+}
