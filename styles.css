@@ -4,15 +4,14 @@
   --font-roboto: 'Roboto Slab', sans-serif;
   --font-sarabun: 'Sarabun', sans-serif;
   /*Font colors*/
-  --font-color-primary: rgb(150, 130, 221);
+  --font-color-primary: #000000;
 
   /*Background colors*/
   --bg-dark-body: #04030f;
-  --bg-light-header: rgb(191, 182, 223);
+  --bg-light-header: rgb(219, 255, 247);
 
   /*Accesories*/
-  --button-color: rgb(252, 226, 247);
-  --button-hover-color: rgb(220, 255, 253);
+  --button-color: black;
 }
 
 
@@ -32,6 +31,7 @@ html {
 
 
 body {
+  background-color: white;
   margin: 0;
   overflow-x: hidden;
   min-width: 400px;
@@ -78,21 +78,35 @@ p {
   font-size: 1rem;
 }
 
+img {
+  max-width: 95%;
+  height: auto;
+  border-radius: 2px;
+  filter: grayscale(30%);
+  box-shadow: 1px 1.5px 2px rgb(0, 0, 0);
+}
 
 
 
 /*Mobile version*/
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .container {
+  background-color: var(--bg-light-header);
   width: 100%;
+  height: 60px;
+  display: flex;
   position: fixed;
+  justify-content: space-between;
+  align-items: center;
   bottom: 0;
   left: 0;
   padding: 0 1rem;
-  height: 60px;
-  background-color: var(--bg-light-header);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .header-logo {
@@ -108,21 +122,43 @@ p {
   gap: 1rem;
 }
 
-section {
+.section {
+  width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section#about {
+  justify-content: center;
+}
+
+.section#about::before {
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.767);
+}
+
+.title {
+  text-align: center;
 }
 
 .start-btn {
   width: 200px;
   height: 50px;
-  background-color: var(--button-color);
-  font-size: 1rem;
+  background: var(--button-color);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 400;
   font-family: inherit;
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 3px;
   cursor: pointer;
+  text-decoration: none;
+  box-shadow: 1.5px 1.5px 1px rgb(0, 0, 0);
+  opacity: 95%;
 }
 
 .start-btn:hover {
-  background-color: var(--button-hover-color);
+  opacity: 100%;
 }
