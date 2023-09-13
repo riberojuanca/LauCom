@@ -134,6 +134,7 @@ img {
 }
 
 .header-menu {
+  font-size: .8rem;
   display: flex;
   /* justify-items: center; */
   /* display: none; */
