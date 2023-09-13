@@ -58,6 +58,7 @@ a:hover,
 }
 
 h1 {
+  margin: 0;
   font-size: 2rem;
   color: var(--font-color-primary);
 }
@@ -112,17 +113,35 @@ img {
 }
 
 .header-logo {
-  font-family: var(--font-signika);
-  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-weight: 800;
+  font-size: 1.8rem;
+  gap: 2px;
+}
+
+.header-logo small {
+  display: flex;
+  align-items: center;
+  padding-right: 3px;
+  text-align: right;
+  height: 2rem;
+  border-right: .3px solid rgba(0, 0, 0, 0.342);
+  line-height: 10px;
+  font-size: .8rem;
+  font-weight: 400;
 }
 
 .header-menu {
   display: flex;
   /* justify-items: center; */
   /* display: none; */
-  gap: 1rem;
+  gap: .8rem;
 }
+
+
+
 
 .section {
   width: 100%;
