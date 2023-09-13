@@ -119,19 +119,21 @@ img {
   font-weight: 800;
   font-size: 1.8rem;
   gap: 2px;
+
+  >small {
+    display: flex;
+    align-items: center;
+    padding-right: 3px;
+    text-align: right;
+    height: 2rem;
+    border-right: .3px solid rgba(0, 0, 0, 0.342);
+    line-height: 10px;
+    font-size: .8rem;
+    font-weight: 400;
+  }
 }
 
-.header-logo small {
-  display: flex;
-  align-items: center;
-  padding-right: 3px;
-  text-align: right;
-  height: 2rem;
-  border-right: .3px solid rgba(0, 0, 0, 0.342);
-  line-height: 10px;
-  font-size: .8rem;
-  font-weight: 400;
-}
+
 
 .header-menu {
   font-size: .8rem;
@@ -141,9 +143,6 @@ img {
   gap: .8rem;
 }
 
-
-
-
 .section {
   width: 100%;
   height: 100vh;
@@ -151,18 +150,16 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-}
 
-.section#about {
-  width: 90%;
-  justify-content: center;
-}
+  &#about {
+    width: 90%;
+    justify-content: center;
+  }
 
-
-
-.title {
-  font-size: 5vw;
-  text-align: center;
+  .title {
+    font-size: 5vw;
+    text-align: center;
+  }
 }
 
 .start-btn {
@@ -179,8 +176,8 @@ img {
   text-decoration: none;
   box-shadow: 1.5px 1.5px 1px rgb(0, 0, 0);
   opacity: 95%;
-}
 
-.start-btn:hover {
-  opacity: 100%;
+  &:hover {
+    opacity: 100%;
+  }
 }
