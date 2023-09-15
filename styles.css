@@ -176,7 +176,11 @@ img {
   padding: 10px;
 }
 
-s .title {
+.article-container>p {
+  max-width: 100%;
+}
+
+.title {
   font-size: 5vw;
   text-align: center;
 }
