@@ -171,7 +171,7 @@ img {
 .article-container {
   background: var(--gradient-color-2);
   width: 90%;
-  height: 80%;
+  height: auto;
   border-radius: 2.5px;
   padding: 10px;
 }
