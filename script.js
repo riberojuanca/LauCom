@@ -25,7 +25,7 @@ function determineVisibleSection() {
 
   for (i = 0; i < sections.length; i++) {
     const section = sections[i];
-    const sectionTop = section.offsetTop - 2;
+    const sectionTop = section.offsetTop + 1;
     const sectionBottom = sectionTop + section.clientHeight;
 
     if (scrollY >= sectionTop && scrollY < sectionBottom) {
