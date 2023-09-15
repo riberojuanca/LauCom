@@ -116,9 +116,13 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  gap: 2px;
+}
+
+.header-logo a {
   font-weight: 800;
   font-size: 1.8rem;
-  gap: 2px;
 }
 
 .header-logo small {
