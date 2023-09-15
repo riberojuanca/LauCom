@@ -7,6 +7,8 @@
   --font-color-primary: #000000;
 
   /*Background colors*/
+  --gradient-color: linear-gradient(103.3deg, rgb(231, 208, 252) 30%, rgb(173, 206, 255) 55.7%, rgba(162, 186, 245, 1) 81.8%);
+  --gradient-color-2: linear-gradient(103.3deg, rgba(252, 225, 208, 0.329) 30%, rgba(255, 173, 214, 0.336) 55.7%, rgba(162, 186, 245, 0.301) 81.8%);
   --bg-dark-body: #04030f;
   --bg-light-header: rgb(219, 255, 247);
 
@@ -31,7 +33,6 @@ html {
 
 
 body {
-  background-color: white;
   margin: 0;
   overflow-x: hidden;
   min-width: 400px;
@@ -99,7 +100,7 @@ img {
 }
 
 .container {
-  background-color: var(--bg-light-header);
+  background: var(--gradient-color);
   width: 100%;
   height: 60px;
   display: flex;
@@ -145,9 +146,6 @@ img {
   gap: .8rem;
 }
 
-
-
-
 .section {
   width: 100%;
   height: 100vh;
@@ -162,9 +160,23 @@ img {
   justify-content: center;
 }
 
+.section#articles {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2vh;
+  height: 100vh;
+}
 
+.article-container {
+  background: var(--gradient-color-2);
+  width: 90%;
+  height: 80%;
+  border-radius: 2.5px;
+  padding: 10px;
+}
 
-.title {
+s .title {
   font-size: 5vw;
   text-align: center;
 }
