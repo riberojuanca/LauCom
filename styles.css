@@ -162,6 +162,7 @@ img {
   justify-content: center;
 }
 
+
 .section#articles {
   width: 100%;
   height: 100vh;
@@ -171,9 +172,32 @@ img {
   gap: 2%;
 }
 
-.article-container {
+.articles-container {
+  width: 95%;
+  height: 100vh;
+  display: flex;
+}
+
+.articles-container>svg {
+  fill: rgb(223, 185, 223);
+  opacity: 90%;
+  border-radius: 50%;
+  position: relative;
+  top: 40%;
+  margin: 5px;
+}
+
+.back,
+.next {
+  cursor: pointer;
+}
+
+
+
+.article-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-grow: 1;
   width: 90%;
   background: var(--gradient-color-2);
@@ -183,6 +207,13 @@ img {
   padding: 10px;
 }
 
+.none {
+  display: none;
+}
+
+.view {
+  display: block;
+}
 
 .p-article {
   font-size: .8rem;

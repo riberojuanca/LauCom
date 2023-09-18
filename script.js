@@ -37,3 +37,41 @@ function determineVisibleSection() {
 }
 
 window.addEventListener('scroll', determineVisibleSection);
+
+
+/*Slide articles*/
+
+const btnBack = document.querySelector('.back');
+const btnNext = document.querySelector('.next');
+const articlesItems = document.querySelectorAll('.article-item');
+
+
+btnBack.addEventListener('click', () => {
+  articlesItems.forEach(e => {
+    if (articlesItems.length === 0) {
+      articlesItems[0].classList.remove('none');
+      articlesItems[1].classList.add('none');
+      articlesItems[-1].classList.add('none');
+    } else if (articlesItems.length === 1) {
+      articlesItems[1].classList.remove('none');
+      articlesItems[0].classList.add('none');
+      articlesItems[-1].classList.add('none');
+    } else if (articlesItems.length === -1) {
+      articlesItems[-1].classList.remove('none');
+      articlesItems[1].classList.add('none');
+      articlesItems[0].classList.add('none');
+    }
+  });
+})
+
+btnNext.addEventListener('click', () => {
+  articlesItems.forEach(e => {
+    articlesItems[0].classList.add('none');
+    articlesItems[1].classList.remove('none');
+    articlesItems[-1].classList.add('none');
+  });
+})
+
+
+
+
