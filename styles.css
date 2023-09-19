@@ -190,8 +190,14 @@ img {
 .back,
 .next {
   cursor: pointer;
+  opacity: 50%;
 }
 
+.back:hover,
+.next:hover {
+  opacity: 100%;
+
+}
 
 
 .article-item {
@@ -213,16 +219,17 @@ img {
   display: none;
 }
 
+
 .art0 {
-  background-color: red;
+  background-color: rgba(48, 48, 48, 0.527);
 }
 
 .art1 {
-  background-color: blue;
+  background-color: rgba(48, 48, 48, 0.527);
 }
 
 .art2 {
-  background-color: green;
+  background-color: rgba(48, 48, 48, 0.527);
 }
 
 .view {
