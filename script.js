@@ -45,32 +45,51 @@ const btnBack = document.querySelector('.back');
 const btnNext = document.querySelector('.next');
 const articlesItems = document.querySelectorAll('.article-item');
 
+let currentIndex = 0;
 
-btnBack.addEventListener('click', () => {
-  articlesItems.forEach(e => {
-    if (articlesItems.length === 0) {
-      articlesItems[0].classList.remove('none');
-      articlesItems[1].classList.add('none');
-      articlesItems[-1].classList.add('none');
-    } else if (articlesItems.length === 1) {
-      articlesItems[1].classList.remove('none');
-      articlesItems[0].classList.add('none');
-      articlesItems[-1].classList.add('none');
-    } else if (articlesItems.length === -1) {
-      articlesItems[-1].classList.remove('none');
-      articlesItems[1].classList.add('none');
-      articlesItems[0].classList.add('none');
+
+btnNext.addEventListener('click', (e) => {
+  // Incrementa el índice
+  currentIndex++;
+
+
+  // Si el índice es igual o mayor que la longitud de la lista de artículos, reinicialo a 0
+  if (currentIndex >= articlesItems.length) {
+    currentIndex = 0;
+  }
+
+  // Muestra el artículo actual
+  articlesItems[currentIndex].classList.remove('none');
+
+  // Oculta todos los demás artículos
+  for (let i = 0; i < articlesItems.length; i++) {
+    if (i !== currentIndex) {
+      articlesItems[i].classList.add('none');
     }
-  });
-})
+  }
+});
+btnBack.addEventListener('click', (e) => {
+  // Decrementa el índice
+  currentIndex--;
 
-btnNext.addEventListener('click', () => {
-  articlesItems.forEach(e => {
-    articlesItems[0].classList.add('none');
-    articlesItems[1].classList.remove('none');
-    articlesItems[-1].classList.add('none');
-  });
-})
+  // Si el índice es menor que 0, reinicialo al final de la lista de artículos
+  if (currentIndex < 0) {
+    currentIndex = articlesItems.length - 1;
+  }
+
+  // Muestra el artículo actual
+  articlesItems[currentIndex].classList.remove('none');
+
+  // Oculta todos los demás artículos
+  for (let i = 0; i < articlesItems.length; i++) {
+    if (i !== currentIndex) {
+      articlesItems[i].classList.add('none');
+    }
+  }
+});
+
+
+
 
 
 

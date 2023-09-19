@@ -207,8 +207,22 @@ img {
   padding: 10px;
 }
 
+
+
 .none {
   display: none;
+}
+
+.art0 {
+  background-color: red;
+}
+
+.art1 {
+  background-color: blue;
+}
+
+.art2 {
+  background-color: green;
 }
 
 .view {
