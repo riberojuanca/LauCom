@@ -31,12 +31,12 @@ function determineVisibleSection() {
     if (scrollY >= sectionTop && scrollY < sectionBottom) {
       menuLinks[i].classList.add('enlace-active');
     } else {
-      menuLinks[i].classList.remove('enlace-active');
+      menuLinks[i]?.classList.remove('enlace-active');
     }
   }
 }
-
 window.addEventListener('scroll', determineVisibleSection);
+
 
 
 /*Slide articles*/
