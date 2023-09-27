@@ -7,16 +7,14 @@
   --font-color-primary: #000000;
 
   /*Background colors*/
-  --gradient-color: linear-gradient(103.3deg, rgb(231, 208, 252) 30%, rgb(173, 206, 255) 55.7%, rgba(162, 186, 245, 1) 81.8%);
-  --gradient-color-2: linear-gradient(103.3deg, rgba(252, 225, 208, 0.329) 30%, rgba(255, 173, 214, 0.336) 55.7%, rgba(162, 186, 245, 0.301) 81.8%);
-  --gradient-color-3: linear-gradient(103.3deg, rgb(36, 24, 46) 30%, rgb(19, 34, 57) 55.7%, rgb(23, 33, 57) 81.8%);
-  --bg-dark-body: #04030f;
-  --bg-light-header: rgb(219, 255, 247);
   --menu-color: rgba(182, 211, 255, 0.856);
+  --field-color: rgba(143, 170, 211, 0.856);
 
   /*Accesories*/
   --button-color: black;
   --button-color2: red;
+  --font-color-1: #8a939e;
+  --height-menu: 60px;
 }
 
 
@@ -107,7 +105,7 @@ img {
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   width: 100%;
-  height: 60px;
+  height: var(--height-menu);
   display: flex;
   position: fixed;
   justify-content: space-between;
@@ -248,7 +246,7 @@ img {
 }
 
 .p-article {
-  color: #8a939e;
+  color: var(--font-color-1);
   font-size: .7rem;
   max-height: 70%;
   overflow-x: hidden;
@@ -260,19 +258,57 @@ img {
 }
 
 .section#contact {
-  width: 100%;
-  height: 50vh;
   background-color: rgba(13, 17, 23, 0.912);
-  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 40vh;
+  margin-bottom: var(--height-menu);
+}
+
+form {
+  width: 70%;
+  margin: auto;
+}
+
+label {
+  padding: 2px;
 }
 
 .field {
-  background: var(--gradient-color-2);
-  margin: 10px auto;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+  color: var(--font-color-1);
+  margin: 6px auto;
   border-radius: 3px;
+  padding: 0 4px 4px 4px;
+}
+
+input#name,
+#email,
+#message {
+  background-color: var(--menu-color);
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  opacity: 20%;
+  padding: 5px;
+  font-family: inherit;
+  font-weight: 300;
 }
 
 #message {
-  height: 200px;
+  width: 100%;
+  height: 100px;
+  resize: none;
+  overflow: auto;
+  display: flex;
+}
 
+#message.field-active,
+#name.field-active,
+#email.field-active {
+  background-color: var(--menu-color);
+  opacity: 80%;
 }

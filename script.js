@@ -92,5 +92,53 @@ btnBack.addEventListener('click', (e) => {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const message = document.getElementById('message');
 
+  message.addEventListener('focus', (e) => {
+    message.classList.add('field-active');
+  });
+
+  document.addEventListener('blur', (e) => {
+    if (e.target !== message) {
+      message.classList.remove('field-active');
+    }
+  })
+  document.addEventListener('click', (e) => {
+    if (e.target !== message) {
+      message.classList.remove('field-active');
+    }
+  })
+
+  const name = document.getElementById('name');
+  name.addEventListener('focus', (e) => {
+    name.classList.add('field-active');
+  });
+  document.addEventListener('blur', (e) => {
+    if (e.target !== name) {
+      name.classList.remove('field-active');
+    }
+  })
+  document.addEventListener('click', (e) => {
+    if (e.target !== name) {
+      name.classList.remove('field-active');
+    }
+  })
+
+
+  const email = document.getElementById('email');
+  email.addEventListener('focus', (e) => {
+    email.classList.add('field-active');
+  });
+  document.addEventListener('blur', (e) => {
+    if (e.target !== email) {
+      email.classList.remove('field-active');
+    }
+  })
+  document.addEventListener('click', (e) => {
+    if (e.target !== email) {
+      email.classList.remove('field-active');
+    }
+  })
+});
 
