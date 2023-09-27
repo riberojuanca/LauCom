@@ -321,6 +321,8 @@ input#name,
   text-decoration: none;
   box-shadow: 1.5px 1.5px 1px rgb(0, 0, 0);
   opacity: 80%;
+  appearance: none;
+  outline: none;
 }
 
 #submit:hover {
