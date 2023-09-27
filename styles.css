@@ -265,3 +265,14 @@ img {
   background-color: rgba(13, 17, 23, 0.912);
   color: white;
 }
+
+.field {
+  background: var(--gradient-color-2);
+  margin: 10px auto;
+  border-radius: 3px;
+}
+
+#message {
+  height: 200px;
+
+}
